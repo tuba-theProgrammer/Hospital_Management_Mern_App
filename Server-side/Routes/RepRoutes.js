@@ -2,7 +2,7 @@ const express= require('express')
 const app= express()
 
 const RepConntroller = require('../Controllers/receptionistController')
-app.get('/Login',RepRoute.RepLogin)
-app.post('/SignUp',RepRoute.RepLogin)
+app.get('/Login',RepConntroller.Login)
+app.post('/SignUp',RepConntroller.SignUp)
 
-module.exports= {RepConntroller}
+module.exports= app
