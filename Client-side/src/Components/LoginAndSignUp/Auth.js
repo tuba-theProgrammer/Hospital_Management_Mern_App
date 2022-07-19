@@ -11,6 +11,7 @@ export default function Auth(props) {
   const changeAuthMode = () => {
     setAuthMode(authMode === "signin" ? "signup" : "signin")
   }
+  
  
 
 
@@ -120,7 +121,7 @@ export default function Auth(props) {
          CallToServer(SERVER_URL,"GET",LOGIN_URL,data).then(async (success)=>{
            const data = await success.json();
            console.log("Response Message",data.responseMsg)
-        
+           
           },(err)=>{
            console.log("error")    
            } 
